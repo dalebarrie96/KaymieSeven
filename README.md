@@ -1,2 +1,2 @@
 # KaymieSeven
-Kaymie Seven's online tattoo booting form
+Kaymie Seven's online tattoo booking form
