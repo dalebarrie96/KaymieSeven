@@ -7,7 +7,7 @@ var path = require('path');
 var bodyParser = require('body-parser');
 
 app.set('views', __dirname + '/views');
-app.engine('html', require('ejs').renderFile);
+app.engine('html', require('ejs').__express);
 app.set('view engine', 'html');
 
 app.use(bodyParser.urlencoded({
@@ -20,7 +20,7 @@ app.get('/test', (req, res) => res.send('Hello World!'));
 
 app.get('/', function(req, res){
 
-  res.render("index", {hello: "Hello World"});
+  res.render("index", {hello: "This is your fonts"});
 });
 
 app.use(serveStatic(__dirname, {'app': ['index.html', 'index.htm']}));

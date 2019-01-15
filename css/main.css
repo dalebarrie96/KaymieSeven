@@ -8,3 +8,41 @@ h1, h2, h3, h4{
 p {
   font-family: 'Oswald', sans-serif;
 }
+
+header{
+  padding-top: 25px;
+}
+
+hr{
+  width: 85%;
+}
+
+
+/* This is for mobile stuff */
+
+@media (max-width: 768px) {
+
+	header {
+		text-align: center;
+	}
+
+  hr{
+    border: 1px solid #F8DAE2;
+  }
+
+}
+
+/* This is for ipad or higher */
+
+@media (min-width: 768px) {
+
+  header {
+		text-align: left;
+    padding-left: 10%;
+	}
+
+  hr{
+    border: 1.5px solid #F8DAE2;
+  }
+
+}
