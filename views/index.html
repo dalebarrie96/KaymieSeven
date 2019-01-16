@@ -1,4 +1,4 @@
-<% include headerInfo.html %>
+<% include components/headerInfo.html %>
 
   <body>
 
@@ -6,9 +6,20 @@
       <h1>Kaymie Seven</h1>
     </header>
 
-    <hr>
-    <p><%= hello %><p>
+    <hr class="header-hr">
+
+    <div class="row">
+  	  <div class="col-lg-4 col-sm-6">
+      	  <img class="rounded booking-img" src="../img/kaymie_dark_tattoo.jpg" alt="Book Now">
+          <button type="button" class="btn btn-main btn-booking">Book Now</button>
+  	  </div>
+    </div>
+
+
+    <!-- <p><%= hello %><p> -->
+
+    <hr class="body-hr">
 
 
 
-<% include footer.html %>
+<% include components/footer.html %>
