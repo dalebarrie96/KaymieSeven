@@ -18,6 +18,11 @@ hr{
   background-color: #F8DAE2;
 }
 
+.row{
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
 .header-hr{
   width: 85%;
 }
@@ -36,6 +41,14 @@ hr{
     box-shadow: 0 0 0 0.2rem #fceaef;
 }
 
+.fa-facebook-square{
+  color: #F8DAE2;
+}
+
+.fab{
+  color: #F8DAE2;
+}
+
 
 /* This is for mobile stuff */
 
@@ -46,11 +59,10 @@ hr{
 	}
 
   .booking-img{
-    padding-top: 5%;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
+    width: 75%;
   }
 
   .btn-booking{
@@ -58,6 +70,10 @@ hr{
     margin-left: auto;
     margin-right: auto;
     transform: translate(0, -50%);
+  }
+
+  .ipad{
+    display: none;
   }
 
   hr{
@@ -80,10 +96,18 @@ hr{
   }
 
   .booking-img{
+    width: 90%;
+    padding-left: 10%;
+  }
+
+  .btn-booking{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
+  }
+
+  .mobile{
+    display: none;
   }
 
 }

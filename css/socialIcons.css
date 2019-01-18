@@ -1,0 +1,50 @@
+/* social media icons css */
+
+/* .fa-facebook-square{
+  color: #F8DAE2;
+} */
+
+.fab{
+  color: white;
+}
+
+.social-list{
+  text-align:center;
+}
+
+a{
+  font-family: 'Oswald', sans-serif;
+}
+
+.social-icons ul > li > a {
+  display: block;
+  color: white;
+  background-color: #F8DAE2;
+  border-radius: 100%;
+  font-size: 2rem;
+  line-height: 4rem;
+  height: 4rem;
+  width: 4rem;
+}
+
+
+/* This is for mobile stuff */
+
+@media (max-width: 767px) {
+
+.social-li{
+  margin-top: 5%;
+}
+
+}
+
+/* This is for ipad or higher */
+
+@media (min-width: 767px) {
+
+  .social-li{
+    margin-top: 5%;
+    margin-bottom: 10%;
+  }
+
+}

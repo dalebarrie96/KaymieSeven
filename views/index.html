@@ -1,4 +1,5 @@
 <% include components/headerInfo.html %>
+<link href="css/socialIcons.css" rel="stylesheet">
 
   <body>
 
@@ -9,17 +10,35 @@
     <hr class="header-hr">
 
     <div class="row">
-  	  <div class="col-lg-4 col-sm-6">
-      	  <img class="rounded booking-img" src="../img/kaymie_dark_tattoo.jpg" alt="Book Now">
-          <button type="button" class="btn btn-main btn-booking">Book Now</button>
+  	  <div class="col-md-6 col-sm-12">
+      	  <img class="booking-img" src="../img/kaymie_dark_tattoo.jpg" alt="Book Now">
+          <button type="button" class="btn btn-main btn-booking mobile">Book Now</button>
   	  </div>
+      <div class="col-md-2 ipad">
+        <button type="button" class="btn btn-main btn-booking">Book Now</button>
+      </div>
+      <div class="col-md-4 ipad">
+        <% include components/socialIcons.html %>
+      </div>
     </div>
 
 
     <!-- <p><%= hello %><p> -->
 
     <hr class="body-hr">
+    <div class="row">
+      <br><br><br><br><br><br><br><br>
+    </div>
 
+    <hr class="body-hr">
 
+    <div class="row mobile">
+      <div class="col-sm-12">
+        <% include components/socialIcons.html %>
+      </div>
+    </div>
+
+    <hr class="header-hr">
+    <br>
 
 <% include components/footer.html %>
