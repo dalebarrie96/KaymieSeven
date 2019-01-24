@@ -1,4 +1,5 @@
 <% include components/common/headerInfo.html %>
+<link href="css/bookingForm.css" rel="stylesheet">
 
 <body>
 
@@ -11,6 +12,94 @@
   <header class="sub-heading">
     <h3>Booking Form</h3>
   </header>
+
+  <form action="/bookingSubmission">
+    <div class="form-group row form-row">
+      <label for="fullName" class="col-4 col-md-2 col-form-label">Full Name</label>
+      <div class="col-8 col-md-4">
+        <input type="name" class="form-control" id="fullName" placeholder="Enter your full name">
+      </div>
+    </div>
+    <div class="form-group row form-row">
+      <label for="emailAddress" class="col-4 col-md-2 col-form-label">Email Address</label>
+      <div class="col-8 col-md-4">
+        <input type="email" class="form-control" id="emailAddress" aria-describedby="emailHelp" placeholder="Enter your email">
+        <small id="emailHelp" class="form-text text-muted">This is how i'll get in touch.</small>
+      </div>
+    </div>
+    <div class="form-group row form-row">
+      <label for="phoneNo" class="col-4 col-md-2 col-form-label">Phone Number</label>
+      <div class="col-8 col-md-4">
+        <input type="email" class="form-control" id="phoneNo" placeholder="Enter your phone number">
+      </div>
+    </div>
+    <div class="form-group row form-row">
+      <label for="tattoDesc" class="col-4 col-md-2 col-form-label">Your Idea</label>
+      <div class="col-8 col-md-4">
+        <textarea class="form-control" id="tattoDesc" rows="5"
+          placeholder="please write a description of your tattoo"></textarea>
+      </div>
+    </div>
+    <div class="form-group row form-row">
+      <label for="fileUpload" class="col-4 col-md-2 col-form-label">Attach any reference photos</label>
+      <div class="col-8 col-md-4">
+        <input type="file" class="form-control-file" id="fileUpload">
+      </div>
+    </div>
+    <div class="form-group row form-row">
+      <label for="placementDropDown" class="col-4 col-md-2 col-form-label">Placement</label>
+      <div class="col-8 col-md-4">
+        <select id="placementDropDown" class="form-control">
+          <option selected>Placement...</option>
+          <option>Forearm/inner arm</option>
+          <option>Upper arm</option>
+          <option>Calf</option>
+          <option>Thigh</option>
+          <option>Chest</option>
+          <option>Ribs</option>
+          <option>Sternum</option>
+          <option>Neck</option>
+          <option>Back</option>
+          <option>Not Sure</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-group row form-row">
+      <label for="sizeDropDown" class="col-4 col-md-2 col-form-label">Size</label>
+      <div class="col-8 col-md-4">
+        <select id="sizeDropDown" class="form-control">
+          <option selected>size...</option>
+          <option>Small (less than 3")</option>
+          <option>Palm sized</option>
+          <option>Hand sized</option>
+          <option>Full day</option>
+          <option>Not sure</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-group row form-row">
+      <label for="daysDropDown" class="col-4 col-md-2 col-form-label">Your availability</label>
+      <div class="col-8 col-md-4">
+        <select id="daysDropDown" class="form-control">
+          <option selected>Days...</option>
+          <option>Monday</option>
+          <option>Tuesdsy</option>
+          <option>Wednesday</option>
+          <option>Full day</option>
+          <option>Not sure</option>
+        </select>
+      </div>
+    </div>
+
+    <br>
+    <hr class="body-hr">
+
+    <button type="submit" class="btn btn-main btn-bookingSubmission">Send Booking Form</button>
+
+    <hr class="header-hr">
+  </form>
 
 </body>
 

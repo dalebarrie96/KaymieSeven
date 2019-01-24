@@ -1,0 +1,44 @@
+.form-row{
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.row{
+  padding-top: 0%;
+  padding-bottom: 0%;
+}
+
+.form-control{
+  border-color: #F8DAE2;
+}
+
+.form-control.focus, .form-control:focus {
+    box-shadow: 0 0 0 0.2rem #fceaef;
+    border-color: #fceaef;
+}
+
+/* This is for mobile stuff */
+
+@media (max-width: 767px) {
+
+  .ipad{
+    display: none;
+  }
+
+  .btn-bookingSubmission{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+}
+
+/* This is for ipad or higher */
+
+@media (min-width: 767px) {
+
+  .mobile{
+    display: none;
+  }
+
+}
