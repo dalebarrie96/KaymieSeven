@@ -34,6 +34,11 @@ a{
 
 .social-li{
   margin-top: 5%;
+  display: inline-block;
+}
+
+.fa-ul{
+  margin-left: 0%;
 }
 
 }

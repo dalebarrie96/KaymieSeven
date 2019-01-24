@@ -25,6 +25,16 @@ app.get('/', function(req, res){
 
 app.use(serveStatic(__dirname, {'app': ['index.html', 'index.htm']}));
 
+app.get('/BookingForm.html', function(req, res){
+
+  res.render("bookingForm", {hello: "Hello", world: "World"});
+});
+
+app.get('/Shop.html', function(req, res){
+
+  res.render("shopHome", {warning: "Stop being nosey"});
+});
+
 //this may or may not be used... ill see soon
 function getParamValuesKey(urlPath){
 	var urlArray = urlPath.split("?");

@@ -1,5 +1,8 @@
-<% include components/headerInfo.html %>
+<% include components/common/headerInfo.html %>
+<script src="../js/image-flipper/jquery.flipster.min.js"></script>
 <link href="css/socialIcons.css" rel="stylesheet">
+<link href="css/image-flipper/jquery.flipster.min.css" rel="stylesheet">
+<!-- <link href="css/image-flipper/custom-flipper.css" rel="stylesheet"> -->
 
   <body>
 
@@ -9,28 +12,33 @@
 
     <hr class="header-hr">
 
+    <!--  Booking menu section  -->
+
     <div class="row">
   	  <div class="col-md-6 col-sm-12">
       	  <img class="booking-img" src="../img/kaymie_dark_tattoo.jpg" alt="Book Now">
-          <button type="button" class="btn btn-main btn-booking mobile">Book Now</button>
+          <form action="/BookingForm.html">
+            <button type="submit" class="btn btn-main btn-booking mobile">Book Now</button>
+          </form>
   	  </div>
       <div class="col-md-2 ipad">
-        <button type="button" class="btn btn-main btn-booking">Book Now</button>
+        <form action="/BookingForm.html">
+          <button type="submit" class="btn btn-main btn-booking">Book Now</button>
+        </form>
       </div>
       <div class="col-md-4 ipad">
         <% include components/socialIcons.html %>
       </div>
     </div>
 
-
-    <!-- <p><%= hello %><p> -->
+    <!--  Shop images section  -->
 
     <hr class="body-hr">
     <div class="row">
-      <br><br><br><br><br><br><br><br>
+      <% include components/shopSlides.html %>
     </div>
 
-    <hr class="body-hr">
+    <hr class="body-hr mobile">
 
     <div class="row mobile">
       <div class="col-sm-12">
@@ -41,4 +49,4 @@
     <hr class="header-hr">
     <br>
 
-<% include components/footer.html %>
+<% include components/common/footer.html %>

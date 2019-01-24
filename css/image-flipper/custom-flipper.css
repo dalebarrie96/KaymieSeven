@@ -1,0 +1,42 @@
+.flipster{
+  display: block;
+  overflow-x: hidden;
+  overflow-y: visible;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* This is for mobile stuff */
+
+@media (max-width: 767px) {
+
+  .flipper-img{
+    width: 200px;
+  }
+
+  .btn-shop{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    transform: translate(0, -100%);
+  }
+}
+
+/* This is for ipad or higher */
+
+@media (min-width: 767px) {
+
+  .flipper-img{
+    width: 400px;
+  }
+
+  .btn-shop{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 2em;
+    transform: translate(0, -100%);
+  }
+
+}

@@ -5,12 +5,16 @@ h1, h2, h3, h4{
   font-family: 'Special Elite', cursive;
 }
 
-p {
+p, button {
   font-family: 'Oswald', sans-serif;
 }
 
 header{
   padding-top: 25px;
+}
+
+.sub-heading{
+   padding-top: 0%;
 }
 
 hr{
