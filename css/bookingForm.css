@@ -1,3 +1,15 @@
+a{
+  color: black;
+}
+
+a:hover{
+  color:black;
+}
+
+li.active{
+  color: black;
+}
+
 .form-row{
   margin-left: 5%;
   margin-right: 5%;
@@ -15,6 +27,17 @@
 .form-control.focus, .form-control:focus {
     box-shadow: 0 0 0 0.2rem #fceaef;
     border-color: #fceaef;
+}
+
+button.multiselect {
+  background-color: initial;
+  border: 1px solid #fceaef;
+  width: inherit;
+}
+
+.btn.focus, .btn:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem #fceaef;
 }
 
 /* This is for mobile stuff */

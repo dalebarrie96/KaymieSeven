@@ -37,7 +37,7 @@
       <label for="tattoDesc" class="col-4 col-md-2 col-form-label">Your Idea</label>
       <div class="col-8 col-md-4">
         <textarea class="form-control" id="tattoDesc" rows="5"
-          placeholder="please write a description of your tattoo"></textarea>
+          placeholder="Please write a description of your tattoo"></textarea>
       </div>
     </div>
     <div class="form-group row form-row">
@@ -82,13 +82,13 @@
     <div class="form-group row form-row">
       <label for="daysDropDown" class="col-4 col-md-2 col-form-label">Your availability</label>
       <div class="col-8 col-md-4">
-        <select id="daysDropDown" class="form-control">
-          <option selected>Days...</option>
-          <option>Monday</option>
-          <option>Tuesdsy</option>
-          <option>Wednesday</option>
-          <option>Full day</option>
-          <option>Not sure</option>
+        <select id="daysDropDown" multiple="multiple">
+          <option value="monday">Monday</option>
+          <option value="tuesday">Tuesday</option>
+          <option value="wednesday">Wednesday</option>
+          <option value="thursday">Thursday</option>
+          <option value="friday">Friday</option>
+          <option value="any">Any Days</option>
         </select>
       </div>
     </div>
@@ -100,6 +100,14 @@
 
     <hr class="header-hr">
   </form>
+
+
+  <!-- Initialize the plugin: -->
+  <script type="text/javascript">
+      $(document).ready(function() {
+          $('#daysDropDown').multiselect();
+      });
+  </script>
 
 </body>
 

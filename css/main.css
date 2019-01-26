@@ -5,7 +5,7 @@ h1, h2, h3, h4{
   font-family: 'Special Elite', cursive;
 }
 
-p, label, input, small, button {
+p, label, input, small, button, select, option, textarea {
   font-family: 'Oswald', sans-serif;
 }
 
