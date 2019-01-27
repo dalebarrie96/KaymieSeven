@@ -17,15 +17,18 @@ module.exports = function(app,urlencodedParser,jsonParser){
     var mailEngine = require('./managers/mailEngine');
 
     try{
-      mailEngine.sendBookingEmail(req.body);
+      var url = mailEngine.sendBookingEmail(req.body);
+
+      url.then(function(url){
+        console.log(url);
+        res.render('deposit', {url: url});
+      });
     }catch(error){
       console.log(error);
       //add error message to view
+      res.render('bookingForm', {error: error});
       //possibly log error to db
     }
-
-
-    res.render('deposit', {name: 'test'});
   });
 
   app.get('/Shop.html', function(req, res){

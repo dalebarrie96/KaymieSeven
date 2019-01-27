@@ -1,4 +1,8 @@
 const nodemailer = require("nodemailer");
+var ejs = require('ejs')
+var fs = require('fs');
+
+const emailDir = './views/components/emailTemplates/';
 
 module.exports = {
 
@@ -28,7 +32,7 @@ async function main(){
     to: "kazzaseven@tats.com", // list of receivers
     subject: "Let Me Book!", // Subject line
     text: "Hello world?", // plain text body
-    html: "<b>Hello world?</b> <p> " + data.fullName + "</p>" // html body
+    html: "<h1>Testing</h1> <br><br> <p> " + data.fullName + "</p>"// html body
   };
 
   // send mail with defined transport object
@@ -36,10 +40,14 @@ async function main(){
 
   console.log("Message sent: %s", info.messageId);
   // Preview only available when sending through an Ethereal account
-  console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
+  // console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
+
+  return nodemailer.getTestMessageUrl(info);
 }
 
-main().catch(console.error);
+var url = main().catch(console.error);
+
+return url;
 }
 
 }

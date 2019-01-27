@@ -13,6 +13,12 @@
     <h3>Booking Form</h3>
   </header>
 
+  <% if (!typeof error == 'undefined') { %>
+    <p> <%= error %> </p>
+<% } %>
+
+
+
   <form action="/BookingForm.html" method="post">
     <div class="form-group row form-row">
       <label for="fullName" class="col-4 col-md-2 col-form-label">Full Name</label>
