@@ -22,9 +22,12 @@
   },
   "homepage": "https://github.com/dalebarrie96/KaymieSeven#readme",
   "dependencies": {
+    "body-parser": "^1.18.3",
     "ejs": "^2.6.1",
+    "email-templates": "^5.0.3",
     "express": "^4.16.4",
     "jquery": "^3.3.1",
+    "nodemailer": "^5.1.1",
     "nodemon": "^1.18.9",
     "serve-static": "^1.13.2"
   }

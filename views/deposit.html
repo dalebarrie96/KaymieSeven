@@ -1,0 +1,15 @@
+<% include components/common/headerInfo.html %>
+
+<p>deposit page</p>
+
+<p> Hello <%= name %> </p>
+
+<p id="url"><%= url %></p>
+
+<script type="text/javascript">
+  var url = $('#url').html();
+    window.open(url,'_blank');
+</script>
+
+
+<% include components/common/footer.html %>

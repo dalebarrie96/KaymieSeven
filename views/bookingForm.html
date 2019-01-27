@@ -13,43 +13,43 @@
     <h3>Booking Form</h3>
   </header>
 
-  <form action="/bookingSubmission">
+  <form action="/BookingForm.html" method="post">
     <div class="form-group row form-row">
       <label for="fullName" class="col-4 col-md-2 col-form-label">Full Name</label>
       <div class="col-8 col-md-4">
-        <input type="name" class="form-control" id="fullName" placeholder="Enter your full name">
+        <input type="name" class="form-control" id="fullName" name="fullName" placeholder="Enter your full name">
       </div>
     </div>
     <div class="form-group row form-row">
       <label for="emailAddress" class="col-4 col-md-2 col-form-label">Email Address</label>
       <div class="col-8 col-md-4">
-        <input type="email" class="form-control" id="emailAddress" aria-describedby="emailHelp" placeholder="Enter your email">
+        <input type="email" class="form-control" id="emailAddress" name="email" aria-describedby="emailHelp" placeholder="Enter your email">
         <small id="emailHelp" class="form-text text-muted">This is how i'll get in touch.</small>
       </div>
     </div>
     <div class="form-group row form-row">
       <label for="phoneNo" class="col-4 col-md-2 col-form-label">Phone Number</label>
       <div class="col-8 col-md-4">
-        <input type="email" class="form-control" id="phoneNo" placeholder="Enter your phone number">
+        <input type="tel" class="form-control" id="phoneNo" name="phoneNo" placeholder="Enter your phone number">
       </div>
     </div>
     <div class="form-group row form-row">
       <label for="tattoDesc" class="col-4 col-md-2 col-form-label">Your Idea</label>
       <div class="col-8 col-md-4">
-        <textarea class="form-control" id="tattoDesc" rows="5"
+        <textarea class="form-control" id="tattoDesc" rows="5" name="tattooDesc"
           placeholder="Please write a description of your tattoo"></textarea>
       </div>
     </div>
     <div class="form-group row form-row">
       <label for="fileUpload" class="col-4 col-md-2 col-form-label">Attach any reference photos</label>
       <div class="col-8 col-md-4">
-        <input type="file" class="form-control-file" id="fileUpload">
+        <input type="file" class="form-control-file" id="fileUpload" name="fileUpload">
       </div>
     </div>
     <div class="form-group row form-row">
       <label for="placementDropDown" class="col-4 col-md-2 col-form-label">Placement</label>
       <div class="col-8 col-md-4">
-        <select id="placementDropDown" class="form-control">
+        <select id="placementDropDown" class="form-control" name="Placement">
           <option selected>Placement...</option>
           <option>Forearm/inner arm</option>
           <option>Upper arm</option>
@@ -68,7 +68,7 @@
     <div class="form-group row form-row">
       <label for="sizeDropDown" class="col-4 col-md-2 col-form-label">Size</label>
       <div class="col-8 col-md-4">
-        <select id="sizeDropDown" class="form-control">
+        <select id="sizeDropDown" class="form-control" name="size">
           <option selected>size...</option>
           <option>Small (less than 3")</option>
           <option>Palm sized</option>
@@ -82,7 +82,7 @@
     <div class="form-group row form-row">
       <label for="daysDropDown" class="col-4 col-md-2 col-form-label">Your availability</label>
       <div class="col-8 col-md-4">
-        <select id="daysDropDown" multiple="multiple">
+        <select id="daysDropDown" multiple="multiple" name="availability">
           <option value="monday">Monday</option>
           <option value="tuesday">Tuesday</option>
           <option value="wednesday">Wednesday</option>
