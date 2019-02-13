@@ -17,7 +17,15 @@ module.exports = function(app,urlencodedParser,jsonParser){
     var mailEngine = require('./managers/mailEngine');
 
     try{
-      var url = mailEngine.sendBookingEmail(req.body);
+
+      if (Object.keys(req.files).length == 0) {
+        console.log('No files were uploaded.');
+      }else{
+        // console.log(req.files.refPhoto.name);
+        // console.log(req.files.refPhoto.path);
+      }
+
+      var url = mailEngine.sendBookingEmail(req);
 
       url.then(function(url){
         console.log(url);

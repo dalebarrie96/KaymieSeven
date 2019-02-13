@@ -13,13 +13,8 @@
     <h3>Booking Form</h3>
   </header>
 
-  <% if (!typeof error == 'undefined') { %>
-    <p> <%= error %> </p>
-<% } %>
 
-
-
-  <form action="/BookingForm.html" method="post">
+  <form action="/BookingForm.html" method="post" encType="multipart/form-data">
     <div class="form-group row form-row">
       <label for="fullName" class="col-4 col-md-2 col-form-label">Full Name</label>
       <div class="col-8 col-md-4">
@@ -42,16 +37,17 @@
     <div class="form-group row form-row">
       <label for="tattoDesc" class="col-4 col-md-2 col-form-label">Your Idea</label>
       <div class="col-8 col-md-4">
-        <textarea class="form-control" id="tattoDesc" rows="5" name="tattooDesc"
+        <textarea class="form-control" id="tattooDesc" rows="5" name="tattooDesc"
           placeholder="Please write a description of your tattoo"></textarea>
       </div>
     </div>
     <div class="form-group row form-row">
       <label for="fileUpload" class="col-4 col-md-2 col-form-label">Attach any reference photos</label>
       <div class="col-8 col-md-4">
-        <input type="file" class="form-control-file" id="fileUpload" name="fileUpload">
+        <input type="file" class="form-control-file" id="fileUpload" name="refPhoto">
       </div>
     </div>
+
     <div class="form-group row form-row">
       <label for="placementDropDown" class="col-4 col-md-2 col-form-label">Placement</label>
       <div class="col-8 col-md-4">

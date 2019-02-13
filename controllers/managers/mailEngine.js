@@ -3,10 +3,35 @@ var ejs = require('ejs')
 var fs = require('fs');
 
 const emailDir = './views/components/emailTemplates/';
+const toAddress = 'kaymieseven@outlook.com';
+
+function createAttachmentsArray(files){
+
+  var attachments = [];
+
+  var fileArray = [];
+  var array = Object.keys(files);
+
+  array.forEach(function(key){
+    fileArray.push(files[key]);
+  })
+
+  for(var i = 0; i < fileArray.length; i++){
+    attachments[i] = {
+                      filename: fileArray[i].name,
+                      content:  fileArray[i].data
+                     }
+
+  }
+
+  return attachments;
+}
 
 module.exports = {
 
-sendBookingEmail: function(data){
+sendBookingEmail: function(req){
+
+  let data = req.body;
 
   // async..await is not allowed in global scope, must use a wrapper
 async function main(){
@@ -15,7 +40,7 @@ async function main(){
   // Only needed if you don't have a real mail account for testing
   let account = await nodemailer.createTestAccount();
 
-  // create reusable transporter object using the default SMTP transport
+  //create reusable transporter object using the default SMTP transport
   let transporter = nodemailer.createTransport({
     host: "smtp.ethereal.email",
     port: 587,
@@ -26,13 +51,31 @@ async function main(){
     }
   });
 
+  // var transporter = nodemailer.createTransport({
+  //  service: 'gmail',
+  //  auth: {
+  //         user: 'k7bookings@gmail.com',
+  //         pass: 'gmail password'
+  //     }
+  // });
+
+  var html = await ejs.renderFile(emailDir + "bookingEmail.ejs", { data: data });
+
+  test(req.files);
+
   // setup email data with unicode symbols
   let mailOptions = {
-    from: '"Best booking site ever" <best@booking.com>', // sender address
-    to: "kazzaseven@tats.com", // list of receivers
-    subject: "Let Me Book!", // Subject line
-    text: "Hello world?", // plain text body
-    html: "<h1>Testing</h1> <br><br> <p> " + data.fullName + "</p>"// html body
+    from: data.fullName + ' <' + data.email + '>', // sender address
+    to: 'dalebarrieit@gmail.com', // list of receivers
+    subject: "Tattoo Booking", // Subject line
+    text: "", // plain text body
+    html: html,// html body
+    // attachments: [{
+    //     // filename: req.files.refPhoto.name,
+    //     filename: 'attachments',
+    //     // content:  req.files.data
+    // }]
+    attachments: createAttachmentsArray(req.files)
   };
 
   // send mail with defined transport object
