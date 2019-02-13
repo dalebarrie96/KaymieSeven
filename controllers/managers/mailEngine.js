@@ -68,11 +68,6 @@ async function main(){
     subject: "Tattoo Booking", // Subject line
     text: "", // plain text body
     html: html,// html body
-    // attachments: [{
-    //     // filename: req.files.refPhoto.name,
-    //     filename: 'attachments',
-    //     // content:  req.files.data
-    // }]
     attachments: createAttachmentsArray(req.files)
   };
 
@@ -80,8 +75,6 @@ async function main(){
   let info = await transporter.sendMail(mailOptions)
 
   console.log("Message sent: %s", info.messageId);
-  // Preview only available when sending through an Ethereal account
-  // console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
 
   return nodemailer.getTestMessageUrl(info);
 }
