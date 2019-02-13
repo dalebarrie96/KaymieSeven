@@ -61,8 +61,6 @@ async function main(){
 
   var html = await ejs.renderFile(emailDir + "bookingEmail.ejs", { data: data });
 
-  test(req.files);
-
   // setup email data with unicode symbols
   let mailOptions = {
     from: data.fullName + ' <' + data.email + '>', // sender address

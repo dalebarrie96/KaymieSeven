@@ -41,10 +41,10 @@
           placeholder="Please write a description of your tattoo"></textarea>
       </div>
     </div>
-    <div class="form-group row form-row">
+    <div class="form-group row form-row" id="file-input-group">
       <label for="fileUpload" class="col-4 col-md-2 col-form-label">Attach any reference photos</label>
-      <div class="col-8 col-md-4">
-        <input type="file" class="form-control-file" id="fileUpload" name="refPhoto">
+      <div class="col-8 col-md-4" id="file-input-list">
+        <input type="file" class="form-control-file" id="fileUpload" name="refPhoto" onclick="addFileInput()">
       </div>
     </div>
 
@@ -106,9 +106,17 @@
 
   <!-- Initialize the plugin: -->
   <script type="text/javascript">
+      var imgCount = 0;
+
       $(document).ready(function() {
           $('#daysDropDown').multiselect();
       });
+
+      function addFileInput(){
+        imgCount++;
+        $('#file-input-list').append('<br> <input type="file" class="form-control-file" id="fileUpload" name="refPhoto' + imgCount + '" onclick="addFileInput()">');
+      }
+
   </script>
 
 </body>
